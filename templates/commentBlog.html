@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="post">
+
+ <h1>Blogs<h1>
+
+    <div>
+         <div style="display: flex;">
+            <div style="width:60%"><a href="/">New Blog</a></div>
+            <div style="width:40%;text-align: -webkit-right;"><a href="/Userlogout">Logout</a></div>
+        </div>
+    </div>
+    {% for i in query %}
+    <div style="display: flex;">
+    	<div class="art-body"> {{ i.createdBy }}</div>
+    	<div class="art-date">{{ i.created.strftime("%b %d %Y") }}</div>
+    	<div class="art-date" >blogid {{ i.blogId }}</div>
+    	<br>
+    </div>
+    <div>
+    	<div class="art-body">{{ i.comment }}</div>
+
+    	<hr>
+    <div>
+    {% endfor %}
+   <div>
+        <div class="art-title">Comment</div>
+        <div><textarea name="comment"></textarea></div>
+    </div>
+    <div style="display: flex;">
+        <div class ="error" >{{error}}</div>
+        <div><input type="submit" value="Submit"></div>
+		<div class="art-date"><a href="/Blogs">Back</a></div>
+	</div>
+
+
+</form>
+{% endblock %}
