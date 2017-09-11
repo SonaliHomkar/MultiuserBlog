@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="post">
+    <h2>New Post</h2>
+
+
+
+        <div>Subject</div>
+        <div><input type="text" name="subject" value="{{query.subject}}"></div>
+
+
+        <div>Blog</div>
+        <div><textarea name="blog">{{query.blog}}</textarea></div>
+		<div>Liked By{{ query.likedBy }}</div>
+		<div>disliked by{{ query.dislikedBy }}</div>
+
+
+    <div class ="error" >{{error}}</div>
+    <div><input type="submit" value="Submit"></div>
+
+</form>
+{% endblock %}
