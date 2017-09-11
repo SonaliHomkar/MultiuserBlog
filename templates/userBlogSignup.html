@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post">
+    <h2>Sign in </h2>
+    <div>
+    	<div style="display: flex;"  >
+    		<div class="div1"><label>User Name</label></div>
+    		<div class="div2"><input type="text" name = "txtName" value="{{ strname }}"></div>
+    		<div class="div3 error">{{ msg }}</div>
+    	</div>
+    	<div style="display: flex;" >
+		    <div class="div1"><label>Password</label></div>
+		    <div class="div2"><input type="password" name = "txtpassword" value="{{ strpassword }}"></div>
+		    <div class="div3 error">{{ pwdmsg }}</div>
+    	</div>
+    	<div style="display: flex;" >
+		   	<div class="div1"><label>Verify Password</label></div>
+		   	<div class="div2"> <input type="password" name = "txtrepassword" value="{{ strvarpassword }}"></div>
+		   	<div class="div3 error">{{ varmsg }}</div>
+    	</div>
+    	<div style="display: flex;">
+		   	<div class="div1"><label>email</label></div>
+		   	<div class="div2"><input type="text" name = "txtemail" value="{{ stremail }}"></div>
+		   	<div class="div3 error">{{ emailmsg }}</div>
+    	</div>
+    	<br>
+    	<div style="display: flex;">
+			<div class="div1"><button>submit</button></div>
+			<div class="div2"><button>Reset</button></div>
+    	</div>
+    </div>
+
+
+
+
+</form>
+{% endblock %}
