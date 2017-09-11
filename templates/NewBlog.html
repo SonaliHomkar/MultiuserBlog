@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="post">
+    <h2>New Post</h2>
+
+        <div>Subject</div>
+        <div><input type="text" name="subject" value="{{subject}}"></div>
+
+
+        <div>Blog</div>
+        <div><textarea name="blog">{{blog}}</textarea></div>
+		<div class ="error" >{{error}}</div>
+
+    <div style="display: flex;">
+
+    	<div><input type="submit" value="Submit"></div>
+    	<div class="art-date"><a href="/Blogs">Back</a></div>
+    </div>
+</form>
+{% endblock %}
