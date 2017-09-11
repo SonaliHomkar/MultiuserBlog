@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="post">
+	<h1>Thank you for submitting<h1>
+
+				<div style="display: flex;">
+					<div class="art-title" style="width:60%;">{{ query.subject }}</div>
+					<div class="art-date" style="width:40%;">{{ query.created }}</div>
+				</div>
+					<hr>
+					<pre class="art-body">{{query.blog}}</pre>
+				</div>
+				<a href="/Blogs">List Blogs</a>
+				<br>
+
+
+</form>
+{% endblock %}
