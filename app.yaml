@@ -1,0 +1,12 @@
+application: active-display-136518
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+handlers:
+- url: /.*
+  script: Makeyourblog.app
+
+libraries:
+- name: jinja2
+  version: latest
