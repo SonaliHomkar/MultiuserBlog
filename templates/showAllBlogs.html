@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="post">
+
+ <h1>Blogs<h1>
+
+    <div>
+
+
+         <div style="display: flex;">
+         	<div style="width:60%"><a href="/">New Blog</a></div>
+            <div style="width:40%;text-align: -webkit-right;"><a href="/Userlogout">Logout</a></div>
+        </div>
+    </div>
+
+
+
+     {% for i in query %}
+
+
+         <div style="display: flex;">
+         	{% if i.createdBy == userid %}
+         	<div class="art-title"><a href="/editBlog/{{i.key().id()}}">{{ i.subject }}</a></div>
+         	<div><a href="/deleteBlog/{{i.key().id()}}">Delete</a></div>
+         	{% else %}
+            <div class="art-title">{{ i.subject }}</div>
+            {% endif %}
+            <div class="art-date">{{ i.created.strftime("%b %d %Y") }}</div>
+          </div>
+            <hr>
+            <pre class="art-body">{{ i.blog }}</pre>
+            <div style="display: flex;margin-top: 1%;">
+
+            </div>
+            <div style="display: flex;">
+				<div class="art-like"><a class="fontawesome-thumbs-up" href="/likeBlog/{{i.key().id()}}" target="_blank"></a>{{i.likedBy}}</div>
+				<div class="art-like"><a class="fontawesome-thumbs-down" href="/dislikeBlog/{{i.key().id()}}" target="_blank"></a>{{i.dislikedBy}}</div>
+			</div>
+			<div>
+				<div><a href = "/commentBlog/{{i.key().id()}}">Comment</a></div>
+			</div>
+
+
+        <br>
+      {% endfor %}
+</form>
+{% endblock %}
