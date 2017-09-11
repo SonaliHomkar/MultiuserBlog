@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="post">
+	<h2>/ascii/</h2>
+	<label>
+		<div>title</div>
+		<input type="text" name="title" value="{{title}}">
+	</label>
+	<label>
+		<div>art</div>
+		<textarea name="art">{{art}}</textarea>
+	</label>
+	<div class ="error" >{{error}}</div>
+	<div><input type="submit" value="Submit"></div>
+	<hr>
+
+	{% for i in query%}
+				<div class="art">
+					<div class="art-title">{{ i.title }}</div>
+					<pre class="art-body">{{i.art}}</pre>
+				</div>
+				<br>
+
+		{% endfor%}
+</form>
+{% endblock %}
