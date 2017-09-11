@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Udacity templates</title>
+        <style type="text/css">
+        	body{
+        		font-family : sans-serif;
+        		width : 800px;
+        		margin: 0 auto;
+        		padding: 10px;
+        	}
+			.error{
+				color: red;
+			}
+			label{
+				display:block;
+				font-size : 15px;
+				width: 200px;
+				height: 20px;
+			}
+			input[type=text]{
+				width : 200px;
+				font-size : 15px;
+				padding : 2px;
+				height: 20px;
+				margin-bottom: 3px;
+			}
+			input[type=password]{
+				width : 200px;
+				font-size : 15px;
+				padding : 2px;
+				height: 20px;
+				margin-bottom: 3px;
+			}
+			textarea{
+				width: 400px;
+				height: 200px;
+				font-size : 17px;
+				font-family : monospace;
+			}
+			input[type=submit]{
+				font-size : 24px;
+			}
+			hr{
+				margin : 0px auto;
+			}
+			.art + .art{
+				margin-top : 20px;
+			}
+			.art-title{
+				font-weight : bold;
+				font-size : 18px;
+				width : 60%;
+			}
+			.art-date{
+				font-size : 13px;
+				font-weight : normal;
+				text-align: -webkit-right;
+				width : 40%;
+			}
+			.art-body{
+				margin: 0;
+				font-size : 15px;
+				font-weight: normal;
+			}
+			.art-like{
+				font-size : 10px;
+				font-weight : normal;
+				width: 3.5em;
+				display: inline-block;
+			      text-shadow: 3px 3px lightgrey;
+			}
+			a{
+			    font-size: 16px;
+			}
+			.div1{
+				width:20%;
+			}
+			.div2{
+				width:40%;
+			}
+			.div2{
+				width:40%;
+			}
+
+			[class*="fontawesome-"]:before {
+			  font-family: 'FontAwesome', sans-serif;
+			      color: black;
+			      display: inline-block;
+			      text-shadow: 3px 3px lightgrey;
+			    width: 2em;
+			}
+
+
+        </style>
+        <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=fontawesome"/>
+
+    </head>
+    <body>
+    	<h1 style="background-color : #ddd; color: #888; margin: 0 height: 50px">Udacity templates</h1>
+
+    	{% block content %}
+    	{% endblock %}
+    </body>
+</html>
